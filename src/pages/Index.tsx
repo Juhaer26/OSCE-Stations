@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { osceScenarios } from "@/data/osceScenarios";
 import { PatientScript } from "@/components/PatientScript";
 import { CandidateScript } from "@/components/CandidateScript";
@@ -16,6 +16,8 @@ const Index = () => {
   const [stationEnded, setStationEnded] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [finalScore, setFinalScore] = useState({ checked: 0, total: 0 });
+  const [isPlayingAudio, setIsPlayingAudio] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const handleExaminerTimeEnd = () => {
     setShowTimerPopup(true);
@@ -25,6 +27,46 @@ const Index = () => {
   const candidateTimer = useTimer({ initialSeconds: 2 * 60 });
   // 8 minute timer for marking scheme
   const examinerTimer = useTimer({ initialSeconds: 8 * 60, onTimeEnd: handleExaminerTimeEnd });
+
+  // Play 1-minute warning audio
+  const oneMinuteWarningRef = useRef(false);
+  
+  // Check if 1 minute left and play warning
+  if (examinerTimer.seconds === 60 && examinerTimer.isRunning && !oneMinuteWarningRef.current) {
+    oneMinuteWarningRef.current = true;
+    const warningAudio = new Audio("/audio/1minute.mp3");
+    warningAudio.play().catch(() => {});
+  }
+  
+  // Reset warning flag when timer resets
+  if (examinerTimer.seconds > 60) {
+    oneMinuteWarningRef.current = false;
+  }
+
+  // Play audio first, then start the 8-min timer
+  const handleExaminerStart = () => {
+    const audio = new Audio("/audio/start-audio.mp3");
+    audioRef.current = audio;
+    setIsPlayingAudio(true);
+    oneMinuteWarningRef.current = false;
+    
+    audio.onended = () => {
+      setIsPlayingAudio(false);
+      examinerTimer.start();
+    };
+    
+    audio.onerror = () => {
+      // If audio fails to load, just start the timer
+      setIsPlayingAudio(false);
+      examinerTimer.start();
+    };
+    
+    audio.play().catch(() => {
+      // If play fails, just start the timer
+      setIsPlayingAudio(false);
+      examinerTimer.start();
+    });
+  };
   const selectedScenario = osceScenarios.find((s) => s.id === selectedScenarioId) || osceScenarios[0];
 
   const handleContinueSession = () => {
@@ -192,9 +234,9 @@ const Index = () => {
             <div className="mb-4">
               <Timer
                 formattedTime={examinerTimer.formattedTime}
-                isRunning={examinerTimer.isRunning}
+                isRunning={examinerTimer.isRunning || isPlayingAudio}
                 seconds={examinerTimer.seconds}
-                onStart={examinerTimer.start}
+                onStart={handleExaminerStart}
                 onStop={examinerTimer.stop}
                 onReset={examinerTimer.reset}
                 colorClass="bg-examiner-light border-examiner/20"
