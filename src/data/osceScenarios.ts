@@ -65,7 +65,8 @@ export const osceScenarios: OSCEScenario[] = [
         { question: "Effect on relationships?", answer: "My wife wants me to quit." },
         { question: "Money spent?", answer: "About £55 a week." },
         { question: "Tried quitting before?", answer: "Yes, twice." },
-        { question: "What happened?", answer: "I got stressed and started again." },
+        { question: "What method did you use?", answer: "Just willpower, I didn't use any patches or anything." },
+        { question: "What made you relapse?", answer: "I got stressed and started again." },
         { question: "Withdrawal symptoms?", answer: "Strong cravings, headaches, irritability, poor sleep." }
       ],
       pastMedicalHistory: [
@@ -253,7 +254,8 @@ export const osceScenarios: OSCEScenario[] = [
         { question: "Effect on relationships?", answer: "My partner doesn't smoke and keeps asking me to quit." },
         { question: "Money spent?", answer: "Around £40 a week on tobacco." },
         { question: "Tried quitting before?", answer: "Yes, during pregnancy. I managed for 4 months." },
-        { question: "What happened?", answer: "Started again two weeks after giving birth. The sleep deprivation was awful." },
+        { question: "What method did you use?", answer: "I used nicotine patches. They helped a lot during pregnancy." },
+        { question: "What made you relapse?", answer: "Started again two weeks after giving birth. The sleep deprivation was awful." },
         { question: "Withdrawal symptoms?", answer: "Mood swings, snacking constantly, couldn't concentrate." }
       ],
       pastMedicalHistory: [
@@ -442,7 +444,8 @@ export const osceScenarios: OSCEScenario[] = [
         { question: "Effect on relationships?", answer: "Mum's really angry. Dad doesn't know." },
         { question: "Money spent?", answer: "My mates share. Maybe £10-15 a week." },
         { question: "Tried quitting before?", answer: "Nah, never tried. Don't want to." },
-        { question: "What happened?", answer: "N/A" },
+        { question: "What method did you use?", answer: "N/A - never tried to quit." },
+        { question: "What made you relapse?", answer: "N/A" },
         { question: "Withdrawal symptoms?", answer: "I get a bit moody if I can't smoke for a while." }
       ],
       pastMedicalHistory: [
@@ -630,8 +633,9 @@ export const osceScenarios: OSCEScenario[] = [
         { question: "How does smoking make you feel?", answer: "It's just part of me. I can't imagine life without it." },
         { question: "Effect on relationships?", answer: "My husband died of lung cancer. My kids hate that I still smoke." },
         { question: "Money spent?", answer: "About £100 a week. I know it's ridiculous." },
-        { question: "Tried quitting before?", answer: "More times than I can count. Patches, gum, that Champix, hypnotherapy..." },
-        { question: "What happened?", answer: "Nothing worked for more than a few weeks. The cravings always win." },
+        { question: "Tried quitting before?", answer: "More times than I can count." },
+        { question: "What method did you use?", answer: "Patches, gum, that Champix, hypnotherapy... I've tried everything." },
+        { question: "What made you relapse?", answer: "Nothing worked for more than a few weeks. The cravings always win." },
         { question: "Withdrawal symptoms?", answer: "Terrible. Shaking, can't sleep, feel like I'm going mad." }
       ],
       pastMedicalHistory: [
@@ -822,7 +826,8 @@ export const osceScenarios: OSCEScenario[] = [
         { question: "Effect on relationships?", answer: "My husband doesn't know I'm still smoking. I hide it." },
         { question: "Money spent?", answer: "About £30 a week, less than before." },
         { question: "Tried quitting before?", answer: "I tried when I found out I was pregnant. Lasted two weeks." },
-        { question: "What happened?", answer: "I had a scan and got anxious. Started again that evening." },
+        { question: "What method did you use?", answer: "I tried going cold turkey. I was too scared to use anything in case it harmed the baby." },
+        { question: "What made you relapse?", answer: "I had a scan and got anxious. Started again that evening." },
         { question: "Withdrawal symptoms?", answer: "Anxiety, really bad anxiety. And I couldn't sleep." }
       ],
       pastMedicalHistory: [
