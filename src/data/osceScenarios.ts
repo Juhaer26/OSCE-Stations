@@ -75,23 +75,25 @@ export const osceScenarios: OSCEScenario[] = [
       ],
       medications: [
         "No regular medications.",
-        "Never tried nicotine replacement."
+        "Never tried nicotine replacement.",
+        "Allergies: No known allergies."
       ],
       familyHistory: [
         "My dad had a stroke in his 60s.",
         "My mum has diabetes."
       ],
       socialHistory: [
+        { category: "Alcohol", answer: "A couple of drinks on weekends." },
+        { category: "Recreational drugs", answer: "No." },
         { category: "Work", answer: "I work as a security guard, mostly night shifts." },
         { category: "Home life", answer: "I live with my wife and two kids." },
         { category: "Stress", answer: "Work stress and lack of sleep make me smoke more." },
-        { category: "Alcohol", answer: "A couple of drinks on weekends." },
-        { category: "Drugs", answer: "No." },
         { category: "Exercise", answer: "Very little — I feel tired most of the time." },
         { category: "Support", answer: "My family would support me quitting." }
       ],
       motivation: [
         { question: "Motivation score (1–10)?", answer: "Probably a 7." },
+        { question: "Are you aware of the medical risks of smoking?", answer: "I know it's bad for your lungs and heart. My dad had a stroke so I worry about that." },
         { question: "If PA explains support", answer: "I didn't realise there was medication that could help. Follow-up support sounds helpful." }
       ],
       ending: [
@@ -264,23 +266,25 @@ export const osceScenarios: OSCEScenario[] = [
       ],
       medications: [
         "Just vitamins.",
-        "I used patches during pregnancy but stopped when I gave birth."
+        "I used patches during pregnancy but stopped when I gave birth.",
+        "Allergies: Yes, Penicillin (causes a rash)."
       ],
       familyHistory: [
         "My mum has COPD from smoking.",
         "My nan died of lung cancer."
       ],
       socialHistory: [
+        { category: "Alcohol", answer: "The odd glass of wine, not much." },
+        { category: "Recreational drugs", answer: "No, never." },
         { category: "Work", answer: "I'm on maternity leave. I was a hairdresser." },
         { category: "Home life", answer: "I live with my partner and our 3-month-old baby." },
         { category: "Stress", answer: "Being a new mum is exhausting. I don't get much sleep." },
-        { category: "Alcohol", answer: "The odd glass of wine, not much." },
-        { category: "Drugs", answer: "No, never." },
         { category: "Exercise", answer: "I try to walk with the pram when I can." },
         { category: "Support", answer: "My partner and my mum are supportive." }
       ],
       motivation: [
         { question: "Motivation score (1–10)?", answer: "I'd say 8. Seeing my mum struggle with breathing scares me." },
+        { question: "Are you aware of the medical risks of smoking?", answer: "Yes, my mum has COPD and my nan died of lung cancer. I know what it can do." },
         { question: "If PA explains support", answer: "I'd really like to try the medication if it's safe while breastfeeding." }
       ],
       ending: [
@@ -454,23 +458,25 @@ export const osceScenarios: OSCEScenario[] = [
       ],
       medications: [
         "Nothing.",
-        "I've tried vaping but cigarettes are easier to hide."
+        "I've tried vaping but cigarettes are easier to hide.",
+        "Allergies: No known allergies."
       ],
       familyHistory: [
         "Grandad smoked and he's fine.",
         "Mum quit years ago."
       ],
       socialHistory: [
+        { category: "Alcohol", answer: "Sometimes at parties." },
+        { category: "Recreational drugs", answer: "I've tried weed once or twice but I don't like it." },
         { category: "Work", answer: "I'm in Year 11, doing GCSEs." },
         { category: "Home life", answer: "I live with my mum and younger sister." },
         { category: "Stress", answer: "School's stressful. Exams coming up." },
-        { category: "Alcohol", answer: "Sometimes at parties." },
-        { category: "Drugs", answer: "I've tried weed once or twice but I don't like it." },
         { category: "Exercise", answer: "I play football but I've been getting out of breath lately." },
         { category: "Support", answer: "My mates wouldn't get it. Maybe my mum if she wasn't so angry." }
       ],
       motivation: [
         { question: "Motivation score (1–10)?", answer: "Like a 2 or 3. I don't really want to stop." },
+        { question: "Are you aware of the medical risks of smoking?", answer: "Yeah, they tell us at school. Cancer and stuff. But that's when you're old, isn't it?" },
         { question: "If PA explains support", answer: "(After discussion about football) ...Actually the breathing thing is annoying. Maybe I could cut down." }
       ],
       ending: [
@@ -646,23 +652,25 @@ export const osceScenarios: OSCEScenario[] = [
       medications: [
         "Spiriva and Fostair inhalers.",
         "Amlodipine for blood pressure.",
-        "I've tried Champix twice - made me feel sick."
+        "I've tried Champix twice - made me feel sick.",
+        "Allergies: Yes, Amoxicillin (swelling)."
       ],
       familyHistory: [
         "My husband died of lung cancer at 62.",
         "My brother has emphysema."
       ],
       socialHistory: [
+        { category: "Alcohol", answer: "A sherry at Christmas, that's about it." },
+        { category: "Recreational drugs", answer: "No, never." },
         { category: "Work", answer: "I'm retired. Used to work in a factory." },
         { category: "Home life", answer: "I live alone since my husband passed. My daughter visits weekly." },
         { category: "Stress", answer: "I get lonely. Smoking is company in a way." },
-        { category: "Alcohol", answer: "A sherry at Christmas, that's about it." },
-        { category: "Drugs", answer: "No, never." },
         { category: "Exercise", answer: "I can barely walk to the shops without getting breathless." },
         { category: "Support", answer: "My daughter would help. She's very supportive." }
       ],
       motivation: [
         { question: "Motivation score (1–10)?", answer: "Maybe a 5. I want to see my grandchildren grow up." },
+        { question: "Are you aware of the medical risks of smoking?", answer: "I know it all too well. My husband died of lung cancer. And look at me with my COPD." },
         { question: "If PA explains support", answer: "...I suppose if there's something new I haven't tried. I don't want to end up like Harold." }
       ],
       ending: [
@@ -836,23 +844,25 @@ export const osceScenarios: OSCEScenario[] = [
       ],
       medications: [
         "Just pregnancy vitamins.",
-        "I stopped my sertraline when I found out I was pregnant. GP said it was okay to continue but I was worried."
+        "I stopped my sertraline when I found out I was pregnant. GP said it was okay to continue but I was worried.",
+        "Allergies: No known allergies."
       ],
       familyHistory: [
         "My mum has anxiety too.",
         "No serious illnesses in the family."
       ],
       socialHistory: [
+        { category: "Alcohol", answer: "None since I found out I was pregnant." },
+        { category: "Recreational drugs", answer: "No, never." },
         { category: "Work", answer: "I'm an accountant, working from home now." },
         { category: "Home life", answer: "I live with my husband. He's excited about the baby." },
         { category: "Stress", answer: "Very stressed. First pregnancy, working full time, anxious about everything." },
-        { category: "Alcohol", answer: "None since I found out I was pregnant." },
-        { category: "Drugs", answer: "No, never." },
         { category: "Exercise", answer: "Pregnancy yoga once a week." },
         { category: "Support", answer: "My husband would support me but I'd have to tell him first." }
       ],
       motivation: [
         { question: "Motivation score (1–10)?", answer: "9. I really want to stop. I just need help." },
+        { question: "Are you aware of the medical risks of smoking?", answer: "Yes, I know it can harm the baby - low birth weight, premature birth. That's what scares me the most." },
         { question: "If PA explains support", answer: "I didn't know patches were safe in pregnancy. That's really helpful. And maybe I should talk to someone about my anxiety too." }
       ],
       ending: [
